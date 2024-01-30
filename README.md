@@ -2,7 +2,6 @@
 
 ---
 
-## Lambda role cannot create log group?
 
 ## Project  Instructions
 
