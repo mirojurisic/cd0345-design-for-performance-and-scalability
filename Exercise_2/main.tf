@@ -1,6 +1,6 @@
 provider "aws" {
   region  = var.region
-  profile = "miro-udacity"
+  profile = "vscode"
 }
 
 # Policy to lambda to assume role
@@ -15,21 +15,8 @@ data "aws_iam_policy_document" "assume_role" {
   }
 }
 # Policy to lambda to log
-resource "aws_iam_policy" "logging_policy" {
-  name = "logging-policy"
-  policy = jsonencode({
-    "Version" : "2012-10-17",
-    "Statement" : [
-      {
-        Action : [
-          "logs:CreateLogStream",
-          "logs:PutLogEvents"
-        ],
-        Effect : "Allow",
-        Resource : "arn:aws:logs:*:*:*"
-      }
-    ]
-  })
+data "aws_iam_policy" "lambda_basic_policy" {
+  arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 # Add policy  to role
 resource "aws_iam_role" "iam_for_lambda" {
@@ -38,8 +25,8 @@ resource "aws_iam_role" "iam_for_lambda" {
 }
 # Add policy to log to role
 resource "aws_iam_role_policy_attachment" "logging_policy_attachment" {
-  role       = aws_iam_role.iam_for_lambda.id
-  policy_arn = aws_iam_policy.logging_policy.arn
+  role       = aws_iam_role.iam_for_lambda.name
+  policy_arn = "${data.aws_iam_policy.lambda_basic_policy.arn}"
 }
 # Package lambda to be deployed
 data "archive_file" "lambda" {
