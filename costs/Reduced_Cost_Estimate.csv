@@ -1,0 +1,19 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,3952.01,47424.12,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon Route 53,0,183.5,2202.00,USD,,"Hosted Zones (2), Number of Elastic Network Interfaces (2)"
+My Estimate,US East (N. Virginia),,AWS CloudFormation,0,26.48,317.76,USD,,"Number of third-party extensions managed (100), Average duration per operation (30 seconds), Total number of operations per extension (10 per day)"
+My Estimate,US East (N. Virginia),,Application Load Balancer,0,44.53,534.36,USD,,Number of Application Load Balancers (2)
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,1787.448449,21449.38,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Daily, (Workload days: Monday, Tuesday, Wednesday, Thursday, Friday, Baseline: 4, Peak: 12, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (x2gd.medium), Pricing strategy (On-Demand), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,1872.6999999999998,22472.40,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5000 GB), Quantity (1), Instance type (db.m1.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand)"
+My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,37.35,448.20,USD,,Number of NAT Gateways (1)
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
