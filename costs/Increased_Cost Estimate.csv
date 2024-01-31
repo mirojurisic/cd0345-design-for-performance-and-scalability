@@ -1,21 +1,20 @@
 ﻿Estimate summary
 Upfront cost,Monthly cost,Total 12 months cost,Currency
-0,23560.46,282725.52,USD
+0,18594.53,223134.36,USD
 ,,* Includes upfront cost
 
 
 Detailed Estimate
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
-My Estimate,US East (N. Virginia),,Amazon Route 53,0,183.5,2202.00,USD,,"Hosted Zones (2), Number of Elastic Network Interfaces (2)"
-My Estimate,US East (N. Virginia),,AWS CloudFormation,0,26.48,317.76,USD,,"Number of third-party extensions managed (100), Average duration per operation (30 seconds), Total number of operations per extension (10 per day)"
-My Estimate,US East (N. Virginia),,Application Load Balancer,0,44.53,534.36,USD,,Number of Application Load Balancers (2)
-My Estimate,US East (N. Virginia),,Amazon EC2 ,0,12606.640808,151279.69,USD,,"Tenancy (Shared Instances), Operating system (Windows Server), Workload (Daily, (Workload days: Monday, Tuesday, Wednesday, Thursday, Friday, Baseline: 4, Peak: 16, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (m7i-flex.8xlarge), Pricing strategy ( 3yr  No Upfront), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,10624.609999999999,127495.32,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5000 GB), Quantity (1), Instance type (db.m6gd.16xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (500 GB), Total Size of Backup Processed for Export (GB) (500 per month)"
-My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,74.7,896.40,USD,,Number of NAT Gateways (2)
+My Estimate,US East (Ohio),,Amazon Route 53,0,501,6012.00,USD,,"Hosted Zones (2), Basic Checks Within AWS ()"
+My Estimate,US East (Ohio),,AWS CloudFormation,0,272.85,3274.20,USD,,"Number of third-party extensions managed (100), Average duration per operation (30 seconds), Total number of operations per extension (100 per day)"
+My Estimate,US East (Ohio),,S3 Standard,0,1.15,13.80,USD,,S3 Standard storage (50 GB per month)
+My Estimate,US East (Ohio),,Data Transfer,0,0,0.00,USD,,
+My Estimate,US East (Ohio),,Amazon EC2 ,0,3436.9649600000002,41243.58,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Daily, (Workload days: Monday, Tuesday, Wednesday, Thursday, Friday, Baseline: 4, Peak: 16, Duration of peak: 8 Hr 30 Min)), Advance EC2 instance (m4.4xlarge), Pricing strategy (Compute Savings Plans 1yr  No Upfront), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (Ohio),,Amazon RDS for Oracle,0,14382.56,172590.72,USD,,"Storage amount (1000 GB), Storage for each RDS instance (General Purpose SSD (gp2)), Number of RDS for Oracle instances (1), Instance type (db.m5d.24xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), License (Bring your own license), Database edition (Enterprise), Pricing strategy (OnDemand), Additional backup storage (500 GB)"
 
 
 
 Acknowledgement
 "* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
-# My comments:
-1) increase the price of EC2 by taking more powerfull server and do the same for the DB, and also double the NAT so there is no single point of failure
+In production, usually stronger/faster HW is to be used for EC2 and for RDSs in order to get better response time, better user experience escpecially in a peak time of the day.
